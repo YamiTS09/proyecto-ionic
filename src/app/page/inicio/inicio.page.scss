@@ -1,0 +1,22 @@
+  
+.saludo{
+    padding-left: 10%;
+}
+
+.alineado {
+    display: flex;
+    align-items: center;
+  }
+  
+  .text-right {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  
+  .ver-mas {
+    display: flex;
+    align-items: center;
+    gap: 5px; 
+  }
+  

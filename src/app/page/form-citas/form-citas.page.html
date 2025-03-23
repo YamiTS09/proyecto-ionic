@@ -1,0 +1,104 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Agendar cita</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content color="secondary">
+  <ion-item color="secondary">
+    <ion-label class="center">¿Es para usted la cita?</ion-label>
+  </ion-item>
+
+  <div class="center">
+    <ion-radio-group>
+      <ion-item color="secondary">
+        <ion-label>Si</ion-label>
+        <ion-radio slot="start" value="si"></ion-radio>
+      </ion-item>
+      <ion-item color="secondary">
+        <ion-label>No</ion-label>
+        <ion-radio slot="start" value="no"></ion-radio>
+      </ion-item>
+    </ion-radio-group>
+  </div>
+
+  <ion-card color="light">
+    <ion-card-content>
+      <h2><strong>Datos del paciente</strong></h2>
+
+      <ion-item color="light">
+        <ion-input name="name" label="Nombre" labelPlacement="floating" type="text" [maxlength]="20" 
+          pattern="[A-Za-záéíóúÁÉÍÓÚñÑ ]+" required>
+        </ion-input>
+      </ion-item>
+
+      <ion-item color="light">
+        <ion-input name="apellidoP" label="Apellido paterno" labelPlacement="floating" type="text" [maxlength]="20" 
+          pattern="[A-Za-záéíóúÁÉÍÓÚñÑ ]+" required>
+        </ion-input>
+      </ion-item>
+
+      <ion-item color="light">
+        <ion-input name="apellidoM" label="Apellido materno" labelPlacement="floating" type="text" [maxlength]="20" 
+          pattern="[A-Za-záéíóúÁÉÍÓÚñÑ ]+" required>
+        </ion-input>
+      </ion-item>
+
+      <ion-item color="light">
+        <ion-input name="telefono" label="Teléfono" labelPlacement="floating" type="tel" [maxlength]="10" 
+          pattern="[0-9]{10}" required>
+        </ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-textarea label="Descripción" labelPlacement="floating" [autoGrow]="true" [counter]="true"
+          [maxlength]="200">
+        </ion-textarea>
+      </ion-item>
+
+      <ion-text color="dark">Fecha y hora de la cita</ion-text>
+      <ion-datetime-button datetime="datetime"></ion-datetime-button>
+
+      <ion-modal [keepContentsMounted]="true">
+        <ng-template>
+          <ion-datetime id="datetime"></ion-datetime>
+        </ng-template>
+      </ion-modal>
+
+      <ion-item color="light">
+        <ion-select label="Servicio" label-placement="floating">
+          <ion-select-option value="paralisis">Parálisis facial</ion-select-option>
+          <ion-select-option value="esguince">Esguinces</ion-select-option>
+          <ion-select-option value="desgarre">Desgarres musculares</ion-select-option>
+          <ion-select-option value="distension">Distensiones</ion-select-option>
+          <ion-select-option value="tunel">Síndrome del Túnel Carpiano</ion-select-option>
+          <ion-select-option value="ciatico">Nervio Ciático</ion-select-option>
+          <ion-select-option value="masaje_relajante">Masaje relajante</ion-select-option>
+          <ion-select-option value="masaje_descontracturante">Masaje descontracturante</ion-select-option>
+        </ion-select>
+      </ion-item>
+
+      <ion-item color="light">
+        <ion-select label="Fisioterapeuta" label-placement="floating">
+          <ion-select-option value="jose">Lic. José Carlos Naredo Matamoros</ion-select-option>
+          <ion-select-option value="mariana">Lic. Mariana Naredo Matamoros</ion-select-option>
+          <ion-select-option value="israel">Lic. Israel Melo Barbosa</ion-select-option>
+        </ion-select>
+      </ion-item>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
+
+<ion-footer class="ion-no-border">
+  <ion-toolbar>
+    <ion-title>
+      <ion-button (click)="setOpen(true)" type="button" expand="block" shape="round">Continuar</ion-button>
+      <ion-action-sheet [isOpen]="isActionSheetOpen" header="Método de pago" [buttons]="actionSheetButtons"
+        (didDismiss)="setOpen(false)">
+      </ion-action-sheet>
+    </ion-title>
+  </ion-toolbar>
+</ion-footer>

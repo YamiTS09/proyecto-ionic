@@ -1,0 +1,108 @@
+<ion-header [translucent]="true" >
+  <ion-toolbar color="primary" mode="ios">
+    <ion-grid>
+      <ion-row>
+        <ion-col size="1" size-md="1">
+          <ion-icon name="person-circle-outline" size="large" color="light" routerLink="/app-perfil"></ion-icon>
+        </ion-col>
+        <ion-col  class="title-center"><ion-title color="light"><strong>Inicio</strong></ion-title></ion-col>
+        <ion-col size="1" size-md="1">
+          <ion-buttons>
+            <ion-button id="popover-button">
+              <ion-icon name="ellipsis-vertical" color="light"></ion-icon>
+            </ion-button>
+            <ion-popover trigger="popover-button" [dismissOnSelect]="true">
+              <ng-template>
+                <ion-content >
+                  <ion-list color="light">
+                    <ion-item [button]="true" [detail]="false" color="light" routerLink="/nosotros">Nosotros</ion-item>
+                    <ion-item [button]="true" [detail]="false" color="light">Configuración</ion-item>
+                    <ion-item [button]="true" [detail]="false" color="light" routerLink="/acercade">Acerca de</ion-item>
+                  </ion-list>
+                </ion-content>
+              </ng-template>
+            </ion-popover>
+          </ion-buttons>
+        </ion-col>
+      </ion-row>
+    </ion-grid>  
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" color="secondary">
+
+  <ion-text color="dark" >
+    <h1 class="saludo"><strong>¡Hola, Madafakers!</strong></h1>
+  </ion-text>
+
+  <ion-grid>
+    <ion-row class="alineado">
+      <ion-col>
+        <ion-text color="dark">
+          <h3 class="saludo">Próximas citas</h3>
+        </ion-text>
+      </ion-col>
+      <ion-col class="text-right">
+        <div class="ver-mas">
+          <ion-text color="primary">Ver más</ion-text>
+          <ion-back-button default-href="#" icon="arrow-forward-outline" routerLink="/citas"></ion-back-button>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Card Title</ion-card-title>
+      <ion-card-subtitle>Card Subtitle</ion-card-subtitle>
+    </ion-card-header>
+  
+    <ion-card-content>
+      Here's a small text description for the card content. Nothing more, nothing less.
+    </ion-card-content>
+  </ion-card>
+  
+  <ion-grid>
+    <ion-row class="alineado">
+      <ion-col>
+        <ion-text color="dark">
+          <h3 class="saludo">Especialistas</h3>
+        </ion-text>
+      </ion-col>
+      <ion-col class="text-right">
+        <div class="ver-mas">
+          <ion-text color="primary">Ver más</ion-text>
+          <ion-back-button default-href="#" icon="arrow-forward-outline"></ion-back-button>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <ion-card>
+    <ion-card-header>
+
+    </ion-card-header>
+    <ion-card-content>
+      <ion-grid>
+        <ion-row>
+          <ion-col>
+            <ion-avatar>
+              <img alt="Silhouette of a person's head" src="https://ionicframework.com/docs/img/demos/avatar.svg" />
+            </ion-avatar>
+          </ion-col>
+          <ion-col>
+            <ion-avatar>
+              <img alt="Silhouette of a person's head" src="https://ionicframework.com/docs/img/demos/avatar.svg" />
+            </ion-avatar>
+          </ion-col>
+          <ion-col>
+            <ion-avatar>
+              <img alt="Silhouette of a person's head" src="https://ionicframework.com/docs/img/demos/avatar.svg" />
+            </ion-avatar>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-card-content>
+  </ion-card>
+  
+  
+</ion-content>

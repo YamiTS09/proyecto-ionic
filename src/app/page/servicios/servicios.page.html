@@ -1,0 +1,180 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="primary" mode="ios">
+    <ion-grid>
+      <ion-row>
+        <ion-col size="1" size-md="1"><ion-icon name="person-circle-outline" size="large" color="light" routerLink="/app-perfil"></ion-icon>
+        </ion-col>
+        <ion-col class="title-center"><ion-title color="light">Servicios</ion-title></ion-col>
+        <ion-col size="1" size-md="1">
+          <ion-buttons >
+            <ion-button id="popover-button2">
+              <ion-icon name="ellipsis-vertical" color="light"></ion-icon>
+            </ion-button>
+            <ion-popover trigger="popover-button2" [dismissOnSelect]="true">
+              <ng-template>
+                <ion-content>
+                  <ion-list>
+                    <ion-item [button]="true" [detail]="false"routerLink="/nosotros">Nosotros</ion-item>
+                    <ion-item [button]="true" [detail]="false">Configuración</ion-item>
+                    <ion-item [button]="true" [detail]="false" routerLink="/acercade">Acerca de</ion-item>
+                  </ion-list>
+                </ion-content>
+              </ng-template>
+            </ion-popover>
+          </ion-buttons> 
+        </ion-col>
+      </ion-row>
+    </ion-grid>  
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" color="secondary">
+  <ion-segment value="default">
+    <ion-segment-button value="default" content-id="rf">
+      <ion-label>Rehabilitación Física</ion-label>
+    </ion-segment-button>
+    <ion-segment-button value="masajes" content-id="masajes">
+      <ion-label>Masajes</ion-label>
+    </ion-segment-button>
+  </ion-segment>
+
+  <ion-segment-view>
+    <ion-segment-content id="rf" color="secondary">
+      <ion-list [inset]="true" color="secondary">
+        <ion-card>
+          <img src="assets/images/paralisis.png" alt="paralisis-facial">
+          <ion-card-header>
+            <ion-item mode="">
+              <ion-label>
+                <strong>Parálisis facial</strong>
+                <br/>
+                <ion-note>$ 250.00 MX</ion-note>
+              </ion-label>
+              <ion-button slot="end">Solicitar</ion-button>
+            </ion-item>
+          </ion-card-header>
+        </ion-card>
+        <ion-card>
+          <img src="assets/images/esguinces.jpg" alt="esguince">
+          <ion-card-header>
+            <ion-item mode="">
+              <ion-label>
+                <strong>Esguinces</strong>
+                <br/>
+                <ion-note>$ 250.00 MX</ion-note>
+              </ion-label>
+              <ion-button slot="end">Solicitar</ion-button>
+            </ion-item>
+          </ion-card-header>
+        </ion-card>
+        <ion-card>
+          <img src="assets/images/postfractura.png" alt="post-fractura">
+          <ion-card-header>
+            <ion-item mode="">
+              <ion-label>
+                <strong>Post-fractura</strong>
+                <br/>
+                <ion-note>$ 250.00 MX</ion-note>
+              </ion-label>
+              <ion-button slot="end">Solicitar</ion-button>
+            </ion-item>
+          </ion-card-header>
+        </ion-card>
+        <ion-card>
+          <img src="assets/images/desgarre.png" alt="desgarre">
+          <ion-card-header>
+            <ion-item mode="">
+              <ion-label>
+                <strong>Desgarre muscular</strong>
+                <br/>
+                <ion-note>$ 250.00 MX</ion-note>
+              </ion-label>
+              <ion-button slot="end">Solicitar</ion-button>
+            </ion-item>
+          </ion-card-header>
+        </ion-card>
+        <ion-card>
+          <img src="assets/images/disercion.png" alt="distenciones">
+          <ion-card-header>
+            <ion-item mode="">
+              <ion-label>
+                <strong>Distenciones</strong>
+                <br/>
+                <ion-note>$ 250.00 MX</ion-note>
+              </ion-label>
+              <ion-button slot="end">Solicitar</ion-button>
+            </ion-item>
+          </ion-card-header>
+        </ion-card>
+        <ion-card>
+          <img src="assets/images/tunel.png" alt="tunel-carpiano">
+          <ion-card-header>
+            <ion-item mode="">
+              <ion-label>
+                <strong>Sindrome del tunel carpiano</strong>
+                <br/>
+                <ion-note>$ 250.00 MX</ion-note>
+              </ion-label>
+              <ion-button slot="end">Solicitar</ion-button>
+            </ion-item>
+          </ion-card-header>
+        </ion-card>
+        <ion-card>
+          <img src="assets/images/nervio.png" alt="nervio-ciatico">
+          <ion-card-header>
+            <ion-item mode="">
+              <ion-label>
+                <strong>Nervio ciatico</strong>
+                <br/>
+                <ion-note>$ 250.00 MX</ion-note>
+              </ion-label>
+              <ion-button slot="end">Solicitar</ion-button>
+            </ion-item>
+          </ion-card-header>
+        </ion-card>
+      </ion-list>
+    </ion-segment-content>
+    <ion-segment-content id="masajes">
+      <ion-list>
+        <ion-card>
+          <img src="assets/images/masajeE.png" alt="masaje-relajante">
+          <ion-card-content>
+            <ion-picker>
+              <ion-picker-column>
+                <ion-picker-column-option value="cuerpo completo">Cuerpo Completo</ion-picker-column-option>
+                <ion-picker-column-option value="solo espalda">Solo espalda</ion-picker-column-option>
+              </ion-picker-column>
+            </ion-picker>
+            <ion-item mode="">
+              <ion-label>
+                <strong>Masaje relajante</strong>
+                <br/>
+                <ion-note>$ 580.00 MX</ion-note>
+              </ion-label>
+              <ion-button slot="end">Solicitar</ion-button>
+            </ion-item>
+          </ion-card-content>
+        </ion-card>
+        <ion-card>
+          <img src="assets/images/masajeCC.png" alt="masaje-cuerpo-completo">
+          <ion-card-content>
+            <ion-picker>
+              <ion-picker-column>
+                <ion-picker-column-option value="cuerpo completo">Cuerpo Completo</ion-picker-column-option>
+                <ion-picker-column-option value="solo espalda">Solo espalda</ion-picker-column-option>
+              </ion-picker-column>
+            </ion-picker>
+            <ion-item mode="">
+              <ion-label>
+                <strong>Masaje descontracturante</strong>
+                <br/>
+                <ion-note>$ 580.00 MX</ion-note>
+              </ion-label>
+              <ion-button slot="end">Solicitar</ion-button>
+            </ion-item>
+          </ion-card-content>
+        </ion-card>
+      </ion-list>
+    </ion-segment-content>
+  </ion-segment-view>
+</ion-content>

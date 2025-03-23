@@ -1,0 +1,63 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-button routerLink="/inicio-sesion">
+        <ion-icon name="arrow-back"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title color="secondary">Registro</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div class="registro-container">
+    <form>
+      <ion-list>
+        <ion-item>
+          <ion-input name="username" label="Usuario" labelPlacement="floating" type="text" required autocapitalize="none" autocomplete="off"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-input name="name" label="Nombre" labelPlacement="floating" type="text" required></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-input name="apa" label="Apellido Paterno" labelPlacement="floating" type="text" required></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-input name="apm" label="Apellido Materno" labelPlacement="floating" type="text" required></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-input name="tele" label="Teléfono" labelPlacement="floating" type="tel" maxlength="10" pattern="[0-9]{10}" required></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-input name="gmail" label="Correo Electrónico" labelPlacement="floating" type="email" required autocapitalize="none"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-input name="password" label="Contraseña" labelPlacement="floating" type="password" required minlength="6"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-input name="confirmPassword" label="Confirmar Contraseña" labelPlacement="floating" type="password" required minlength="6"></ion-input>
+        </ion-item>
+
+        <ion-item lines="none">
+          <ion-checkbox name="aceptoTerminos" slot="start"></ion-checkbox>
+          <ion-label class="custom-checkbox-label">
+            Acepto los <a href="#">Términos y Condiciones</a>
+          </ion-label>
+        </ion-item>
+      </ion-list>
+
+      <div class="boton-guardar">
+        <ion-button expand="full" type="button" color="primary" shape="round">
+          Guardar
+        </ion-button>
+      </div>
+    </form>
+  </div>
+</ion-content>
